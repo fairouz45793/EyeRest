@@ -29,18 +29,8 @@ public class StopScreen {
     }
 
 
-    void show(boolean show) { // throws InterruptedException {
+    void show(boolean show) {
         frame.setVisible(show);
-        /* Thread t = new Thread(() -> {
-            try {
-                Thread.sleep(20000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        });
-        t.start();
-        t.join(); */
-        // frame.setVisible(false);
     }
 
     boolean isVisible() {

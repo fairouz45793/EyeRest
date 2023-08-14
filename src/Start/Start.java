@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 
 
-public class Start /* implements Runnable */ {
+public class Start {
 
     private JPanel mainPanel;
     private JCheckBox resumeAfter;
@@ -19,7 +19,6 @@ public class Start /* implements Runnable */ {
     private JLabel pop;
     private JTextField resumeTime;
 
-    // private JPanel panel;
     private JLabel closeBtn;
     private JLabel restartBtn;
     private JLabel pauseBtn;
@@ -44,13 +43,11 @@ public class Start /* implements Runnable */ {
         instance = true;
         JFrame frame = new JFrame();
 
-        // JPopupMenu menu = new JPopupMenu();
         JWindow menu = new JWindow();
         pop.setIcon(popIcon1);
+        // make pop button draggable at the right side
         pop.addMouseMotionListener(new MouseMotionAdapter() {
             @Override public void mouseDragged(MouseEvent e) {
-                // super.mouseDragged(e);
-                // System.out.println("is moving");
                 if (menu.isVisible()) menu.setVisible(false);
                 frame.setLocation(x, MouseInfo.getPointerInfo().getLocation().y);
             }
@@ -59,19 +56,31 @@ public class Start /* implements Runnable */ {
         pop.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (isPop1) {
-                    pop.setIcon(popIcon2);
-                    frame.setLocation(x - 256, frame.getLocationOnScreen().y);
-                } else {
-                    pop.setIcon(popIcon1);
-                    frame.setLocation(x, frame.getLocationOnScreen().y);
+                try {
+                    if (isPop1) {
+                        pop.setIcon(popIcon2);
+                        int xIndx = x - 257;
+                        for (int i = x; i > xIndx; i -= 2) {
+                            frame.setLocation(i, frame.getLocationOnScreen().y);
+                            Thread.sleep(1);
+                        }
+                        // frame.setLocation(x - 256, frame.getLocationOnScreen().y);
+                    } else {
+                        pop.setIcon(popIcon1);
+                        // frame.setLocation(x, frame.getLocationOnScreen().y);
+                        for (int i = x - 257; i < x + 1; i += 2) {
+                            frame.setLocation(i, frame.getLocationOnScreen().y);
+                            Thread.sleep(1);
+                        }
+                    }
+                    menu.setVisible(false);
+                    isPop1 = !isPop1;
+                } catch (InterruptedException ex) {
+
                 }
-                menu.setVisible(false);
-                isPop1 = !isPop1;
             }
         });
 
-        // panel = new JPanel();
         closeBtn = new JLabel();
         restartBtn = new JLabel();
         pauseBtn = new JLabel();
@@ -80,15 +89,6 @@ public class Start /* implements Runnable */ {
         restartBtn.setOpaque(false);
         pauseBtn.setOpaque(false);
         settings.setOpaque(false);
-        /* closeBtn.setBackground(new Color(0, 0, 0, 0));
-        restartBtn.setBackground(new Color(0, 0, 0, 0));
-        pauseBtn.setBackground(new Color(0, 0, 0, 0));
-        closeBtn.setFocusable(false);
-        restartBtn.setFocusable(false);
-        pauseBtn.setFocusable(false);
-        closeBtn.setRequestFocusEnabled(false);
-        restartBtn.setRequestFocusEnabled(false);
-        pauseBtn.setRequestFocusEnabled(false); */
 
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new BorderLayout(0, 2));
@@ -105,9 +105,6 @@ public class Start /* implements Runnable */ {
         menu.setSize(30, 108);
         menu.setOpacity(0.5f);
         menu.setVisible(false);
-        /* menu.setBorderPainted(false);
-        menu.setOpaque(false); */
-        // System.out.println(menu.getComponents().length);
 
         closeBtn.setIcon(new ImageIcon("src/icons/close.png"));
         closeBtn.addMouseListener(new MouseAdapter() {
@@ -150,11 +147,7 @@ public class Start /* implements Runnable */ {
         });
 
         Toolkit.getDefaultToolkit().addAWTEventListener(event -> {
-            // System.out.println("awt");
             if (event instanceof MouseEvent) {
-                /* if (event.getID() == MouseEvent.MOUSE_CLICKED && event.getSource() == pop) {
-                    // System.out.println("click");
-                } else { */
                     if (event.getID() == MouseEvent.MOUSE_ENTERED) {
                         Object source = event.getSource();
                         if (source == pauseBtn || source == restartBtn || source == closeBtn || source == settings) return;
@@ -163,24 +156,19 @@ public class Start /* implements Runnable */ {
                             else menu.setLocation(pop.getLocationOnScreen().x, pop.getLocationOnScreen().y + 32);
                             menu.setVisible(true);
                         } else menu.setVisible(false);
-                        // else if (source != inequalities && iMenu != null && iMenu.isVisible()) iMenu.setVisible(false);
                     }
-                // }
             }
             if (event instanceof WindowEvent) {
                 if (event.getID() == WindowEvent.WINDOW_DEACTIVATED || event.getID() == WindowEvent.WINDOW_STATE_CHANGED) {
                     if (menu.isVisible()) menu.setVisible(false);
-                    // else if (tMenu != null && tMenu.isVisible()) tMenu.setVisible(false);
                 }
             }
         }, AWTEvent.WINDOW_EVENT_MASK | AWTEvent.MOUSE_EVENT_MASK);
 
 
-        // Thread thread = new Thread(this);
         java.util.Timer timer = new Timer();
         StopScreen stopScreen = new StopScreen();
         TimerTask task = new TimerTask() {
-            // sec = 0, min = 0;
             final StringBuilder tempTime = new StringBuilder();
 
             @Override public void run() {
@@ -199,13 +187,8 @@ public class Start /* implements Runnable */ {
                     }
                 }
                 if (isPaused) return;
-                // if (thread.isAlive() || isPaused) return;
-                if (min == 1) {
-                    // try {
-                        stopScreen.show(true);
-                    /* } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    } */
+                if (min == 20) {
+                    stopScreen.show(true);
                     stopTime = 20;
                 }
 
@@ -218,8 +201,7 @@ public class Start /* implements Runnable */ {
                 if (sec < 10) tempTime.append(0).append(sec);
                 else tempTime.append(sec);
 
-                time.setText(tempTime.toString()); /*
-                System.out.println(temp); */
+                time.setText(tempTime.toString());
             }
         };
         Calendar calendar = Calendar.getInstance();
@@ -227,24 +209,9 @@ public class Start /* implements Runnable */ {
 
         resumeAfter.addActionListener(e -> {
             if (resumeAfter.isSelected()) {
-                // try {
-                    // isPaused = true;
-                    pauseBtn.setIcon(playIcon);
-                    stopTime = Integer.parseInt(resumeTime.getText()) * 60;
-                    /* frame.revalidate();
-                    frame.repaint(); */
-                    // thread.start();
-                    /* int time = Integer.parseInt(resumeTime.getText()) * 60000;
-                    temp.wait(time); */
-                    // temp.stop();
-                    // temp.join();
-                    // System.out.println("finished");
-                /* } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                } */
-                // isPaused = false;
+                pauseBtn.setIcon(playIcon);
+                stopTime = Integer.parseInt(resumeTime.getText()) * 60;
             } else {
-                // isPaused = false;
                 pauseBtn.setIcon(pauseIcon);
             }
         });
@@ -262,16 +229,5 @@ public class Start /* implements Runnable */ {
         frame.setType(javax.swing.JFrame.Type.UTILITY);
         frame.setVisible(true);
     }
-
-
-    /* public void run() {
-        try {
-            int time = Integer.parseInt(resumeTime.getText()) * 60000;
-            for (int i = 0; i < time / 100; i++)
-                Thread.sleep(100);
-        } catch (InterruptedException ex) {
-            throw new RuntimeException(ex);
-        }
-    } */
 
 }

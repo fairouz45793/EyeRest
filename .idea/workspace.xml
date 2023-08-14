@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c6de560-2c26-4925-94e6-fe6db5a2eacd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/EyeRest01.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/NumbersOnly.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/STimer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/Start.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/Start.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/StopScreen.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Start/StopScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/pop_comp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/pop_demi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/restart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons/settings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/StopScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/StopScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,16 +30,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "16",
-    "last_opened_file_path": "F:/Nouveau dossier (2)/android + intellij + visual s = source code/IdeaProjects/git and github/EyeRest",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;16&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Nouveau dossier (2)/android + intellij + visual s = source code/IdeaProjects/git and github/EyeRest&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -75,5 +64,26 @@
       <updated>1691422836579</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
