@@ -31,7 +31,6 @@ public class Dialog {
         isThemeDone = false;
         yesOrNo = -1;
         okButton.addActionListener(e -> {
-            // saveData();
             yesOrNo = 1;
             myOptionPane.dispose();
         });
@@ -50,14 +49,6 @@ public class Dialog {
         myOptionPane.setUndecorated(true);
         myOptionPane.setBackground(new Color(0, 126, 168, 0));
         myOptionPane.setModal(true);
-
-        /* frame = new JFrame();
-        frame.setSize(450, 420);
-        frame.setLocationRelativeTo(null);
-        frame.setContentPane(contentPanel);
-        frame.setUndecorated(true);
-        // frame.setResizable(false);
-        frame.setType(javax.swing.JFrame.Type.UTILITY); */
     }
 
     public Dialog(String title, String message, String dataToSave) {
@@ -103,13 +94,7 @@ public class Dialog {
         subPanel.setBackground(backgroundColor);
         okButton.setBackground(backgroundColor);
         cancelButton.setBackground(backgroundColor);
-        // pane.setBackground(backgroundColor);
     }
-
-
-    /* void saveData() {
-        SettingsFile.saveSettings(data);
-    } */
 
 
     public int show(boolean visible, int demiWidth) {
@@ -119,7 +104,6 @@ public class Dialog {
         myOptionPane.setLocation(point);
         myOptionPane.repaint();
         myOptionPane.setVisible(visible);
-        // frame.setVisible(visible);
         return yesOrNo;
     }
 

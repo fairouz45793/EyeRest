@@ -61,7 +61,6 @@ public class Start {
 
         JWindow menu = new JWindow();
         pop.setIcon(popIcon1);
-        // make pop button draggable at the right side
         pop.addMouseMotionListener(new MouseMotionAdapter() {
             @Override public void mouseDragged(MouseEvent e) {
                 if (menu.isVisible()) menu.setVisible(false);
@@ -174,11 +173,6 @@ public class Start {
                         } else menu.setVisible(false);
                     }
             }
-            /* if (event instanceof WindowEvent) {
-                if (event.getID() == WindowEvent.WINDOW_DEACTIVATED || event.getID() == WindowEvent.WINDOW_STATE_CHANGED) {
-                    if (menu.isVisible()) menu.setVisible(false);
-                }
-            } */
         }, AWTEvent.WINDOW_EVENT_MASK | AWTEvent.MOUSE_EVENT_MASK);
 
 
@@ -254,18 +248,14 @@ public class Start {
 
 
     public static void changeTimes() {
-        // try {
-            restTime = 20;
-            timeToTakeRest = 20;
-            switch (SettingsFile.getRule()) {
-                case 0 -> { restTime = 20;   timeToTakeRest = 20; }
-                case 1 -> { restTime = 300;  timeToTakeRest = 30; }
-                case 2 -> { restTime = 600;  timeToTakeRest = 60; }
-                case 3 -> { restTime = 1200; timeToTakeRest = 120; }
-            }
-        /* } catch (IOException ex) {
-            ex.printStackTrace();
-        } */
+        restTime = 20;
+        timeToTakeRest = 20;
+        switch (SettingsFile.getRule()) {
+            case 0 -> { restTime = 20;   timeToTakeRest = 20; }
+            case 1 -> { restTime = 300;  timeToTakeRest = 30; }
+            case 2 -> { restTime = 600;  timeToTakeRest = 60; }
+            case 3 -> { restTime = 1200; timeToTakeRest = 120; }
+        }
     }
 
 

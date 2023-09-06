@@ -64,7 +64,7 @@ public class StopScreen {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         window = new JWindow();
-        window.setSize(300, 250);
+        window.setSize(screenSize);
         window.setLocation(900, 100);
         window.setContentPane(contentPanel);
         window.setBackground(Color.BLACK);
@@ -74,17 +74,13 @@ public class StopScreen {
 
 
     public static void changeTimes() {
-        // try {
         restTime = 20;
-            switch (SettingsFile.getRule()) {
-                case 0 -> { restTime = 20; }
-                case 1 -> { restTime = 300; }
-                case 2 -> { restTime = 600; }
-                case 3 -> { restTime = 1200; }
-            }
-        /* } catch (IOException ex) {
-            ex.printStackTrace();
-        } */
+        switch (SettingsFile.getRule()) {
+            case 0 -> { restTime = 20; }
+            case 1 -> { restTime = 300; }
+            case 2 -> { restTime = 600; }
+            case 3 -> { restTime = 1200; }
+        }
     }
 
 

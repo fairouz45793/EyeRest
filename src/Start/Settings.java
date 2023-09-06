@@ -44,16 +44,12 @@ public class Settings {
     private int lastLanguageIndex = -1, oldLanguageIndex = -1;
     private int lastRuleIndex = -1, oldRuleIndex = -1;
     private int lastActionIndex = -1, oldActionIndex = -1;
-    // private ImageIcon inforImage;
-    // private static boolean isThereChanged = false, isThemeChanged = false;
     private static boolean isThemeDone = false;
 
     private JWindow infoWindow;
     private JLabel infoTitle;
     private JTextArea infoText;
 
-    // private static final LineBorder blackBorder = new LineBorder(Color.BLACK, 1, true);
-    // private static final LineBorder whiteBorder = new LineBorder(Color.WHITE, 1, true);
     private static final ImageIcon whiteInfoIcon = new ImageIcon("src/icons/white info.png");
     private static final ImageIcon blackInfoIcon = new ImageIcon("src/icons/white info.png");
     private static final ImageIcon whiteArrow = new ImageIcon("src/icons/white arrow.png");
@@ -67,59 +63,47 @@ public class Settings {
         frame = new JFrame();
 
         darkTheme.addActionListener(e -> {
-            // isThemeChanged = true;
-            // oldTheme = 1;
             lastThemeIndex = 0;
             whiteTheme.setSelected(false);
             darkTheme.setSelected(true);
         });
 
         whiteTheme.addActionListener(e -> {
-            // isThemeChanged = true;
-            // oldTheme = 0;
             lastThemeIndex = 1;
             darkTheme.setSelected(false);
             whiteTheme.setSelected(true);
         });
 
         languageComboBox.addActionListener(e -> {
-            int tempIndex = languageComboBox.getSelectedIndex();
-            // if (lastLanguageIndex != tempIndex) isThereChanged = true;
-            lastLanguageIndex = tempIndex;
+            lastLanguageIndex = languageComboBox.getSelectedIndex();
         });
 
         twentyRule.addActionListener(e -> {
-            // isThereChanged = true;
             unselectLastOne();
             lastRuleIndex = 0;
             twentyRule.setSelected(true);
         });
 
         thirtyRule.addActionListener(e -> {
-            // isThereChanged = true;
             unselectLastOne();
             lastRuleIndex = 1;
             thirtyRule.setSelected(true);
         });
 
         oneHourRule.addActionListener(e -> {
-            // isThereChanged = true;
             unselectLastOne();
             lastRuleIndex = 2;
             oneHourRule.setSelected(true);
         });
 
         twoHoursRule.addActionListener(e -> {
-            // isThereChanged = true;
             unselectLastOne();
             lastRuleIndex = 3;
             twoHoursRule.setSelected(true);
         });
 
         actionComboBox.addActionListener(e -> {
-            int tempIndex = actionComboBox.getSelectedIndex();
-            // if (lastActionIndex != tempIndex) isThereChanged = true;
-            lastActionIndex = tempIndex;
+            lastActionIndex = actionComboBox.getSelectedIndex();
         });
 
         saveButton.addActionListener(e -> {
@@ -127,8 +111,6 @@ public class Settings {
         });
 
         cancelButton.addActionListener(e -> {
-            /* isThemeChanged = false;
-            isThereChanged = false; */
             show(false);
         });
 
@@ -146,18 +128,13 @@ public class Settings {
                     System.out.println("yesOrNo :   " + yesOrNo);
                     if (yesOrNo == 1) saveData();
                     else reload();
-                    /* SettingsFile.saveSettings(themeIndex + "" + languageComboBox.getSelectedIndex() + "" +
-                            ruleIndex + "" + actionComboBox.getSelectedIndex()); */
                 }
-                // isThereChanged = false;
                 frame.setVisible(false);
             }
 
             @Override public void mouseEntered(MouseEvent e) { closeButton.setOpaque(true); closeButton.repaint(); }
 
             @Override public void mouseExited(MouseEvent e) {
-                /* if (themeIndex == 0) closeButton.setBackground(Color.BLACK);
-                else closeButton.setBackground(Color.LIGHT_GRAY); */
                 closeButton.setOpaque(false); closeButton.repaint();
             }
         });
@@ -198,8 +175,6 @@ public class Settings {
     void reload() {
         unselectLastOne();
 
-        // int oldThemeIndex = themeIndex;
-        // try {
         oldThemeIndex = SettingsFile.getTheme();
         lastThemeIndex = oldThemeIndex;
         if (lastThemeIndex == 0) {
@@ -217,14 +192,6 @@ public class Settings {
         oldActionIndex = SettingsFile.getAction();
         lastActionIndex = SettingsFile.getAction();
             actionComboBox.setSelectedIndex(oldActionIndex);
-        /* } catch (IOException ex) {
-            ex.printStackTrace();
-            /* themeIndex = 0;
-            languageComboBox.setSelectedIndex(0);
-            ruleIndex = 0;
-            actionComboBox.setSelectedIndex(0); */
-        // }
-        // System.out.println("data from file :   " + themeIndex + ",  " + languageIndex + ",  " + ruleIndex + ",  " + actionIndex);
 
         switch (oldRuleIndex) {
             case 0 -> twentyRule.setSelected(true);
@@ -232,68 +199,60 @@ public class Settings {
             case 2 -> oneHourRule.setSelected(true);
             case 3 -> twoHoursRule.setSelected(true);
         }
-        // isThereChanged = false;
 
         if (isThemeDone) return;
         isThemeDone = true;
-        // if (oldThemeIndex != themeIndex) {
-        /* private static final Color grayColor = Color.DARK_GRAY;
-    private static final Color blackColor = new Color(51, 51, 51);
-    private static final Color whiteColor = new Color(230, 230, 230); */
         Color backgroundColor;
         Color foregroundColor;
         if (oldThemeIndex == 0) {
-                backgroundColor = Color.darkGray;
-                foregroundColor = Color.WHITE;
-                ((MetalComboBoxButton) languageComboBox.getComponent(0)).setComboIcon(whiteArrow);
-                ((MetalComboBoxButton) actionComboBox.getComponent(0)).setComboIcon(whiteArrow);
-                info20.setIcon(whiteInfoIcon);
-                info30.setIcon(whiteInfoIcon);
-                info1.setIcon(whiteInfoIcon);
-                info2.setIcon(whiteInfoIcon);
-                otherPractices.setIcon(whiteInfoIcon);
-                titleBar.setBackground(Color.BLACK);
-                // closeButton.setBackground(Color.BLACK);
-                closeButton.setIcon(whiteClose);
-            } else {
-                backgroundColor = Color.WHITE;
-                foregroundColor = Color.DARK_GRAY;
-                ((MetalComboBoxButton) languageComboBox.getComponent(0)).setComboIcon(blackArrow);
-                ((MetalComboBoxButton) actionComboBox.getComponent(0)).setComboIcon(blackArrow);
-                info20.setIcon(blackInfoIcon);
-                info30.setIcon(blackInfoIcon);
-                info1.setIcon(blackInfoIcon);
-                info2.setIcon(blackInfoIcon);
-                otherPractices.setIcon(blackInfoIcon);
-                titleBar.setBackground(Color.LIGHT_GRAY);
-                // closeButton.setBackground(Color.LIGHT_GRAY);
-                closeButton.setIcon(blackClose);
-            }
-            contentPanel.setBackground(backgroundColor);
-            themeTxt.setForeground(foregroundColor);
-            darkTheme.setForeground(foregroundColor);
-            whiteTheme.setForeground(foregroundColor);
-            languageTxt.setForeground(foregroundColor);
-            languageComboBox.setForeground(foregroundColor);
-            languageComboBox.setBackground(backgroundColor);
-            rulesTxt.setForeground(foregroundColor);
-            twentyRule.setForeground(foregroundColor);
-            thirtyRule.setForeground(foregroundColor);
-            oneHourRule.setForeground(foregroundColor);
-            twoHoursRule.setForeground(foregroundColor);
-            infoWindow.setBackground(backgroundColor);
-            infoTitle.setForeground(foregroundColor);
-            infoText.setForeground(foregroundColor);
-            moreInfoTxt.setForeground(foregroundColor);
-            actionTxt.setForeground(foregroundColor);
-            actionComboBox.setForeground(foregroundColor);
-            actionComboBox.setBackground(backgroundColor);
-            saveButton.setForeground(foregroundColor);
-            saveButton.setBackground(backgroundColor);
-            cancelButton.setForeground(foregroundColor);
-            cancelButton.setBackground(backgroundColor);
-            frameTitle.setForeground(foregroundColor);
-        // }
+            backgroundColor = Color.darkGray;
+            foregroundColor = Color.WHITE;
+            ((MetalComboBoxButton) languageComboBox.getComponent(0)).setComboIcon(whiteArrow);
+            ((MetalComboBoxButton) actionComboBox.getComponent(0)).setComboIcon(whiteArrow);
+            info20.setIcon(whiteInfoIcon);
+            info30.setIcon(whiteInfoIcon);
+            info1.setIcon(whiteInfoIcon);
+            info2.setIcon(whiteInfoIcon);
+            otherPractices.setIcon(whiteInfoIcon);
+            titleBar.setBackground(Color.BLACK);
+            closeButton.setIcon(whiteClose);
+        } else {
+            backgroundColor = Color.WHITE;
+            foregroundColor = Color.DARK_GRAY;
+            ((MetalComboBoxButton) languageComboBox.getComponent(0)).setComboIcon(blackArrow);
+            ((MetalComboBoxButton) actionComboBox.getComponent(0)).setComboIcon(blackArrow);
+            info20.setIcon(blackInfoIcon);
+            info30.setIcon(blackInfoIcon);
+            info1.setIcon(blackInfoIcon);
+            info2.setIcon(blackInfoIcon);
+            otherPractices.setIcon(blackInfoIcon);
+            titleBar.setBackground(Color.LIGHT_GRAY);
+            closeButton.setIcon(blackClose);
+        }
+        contentPanel.setBackground(backgroundColor);
+        themeTxt.setForeground(foregroundColor);
+        darkTheme.setForeground(foregroundColor);
+        whiteTheme.setForeground(foregroundColor);
+        languageTxt.setForeground(foregroundColor);
+        languageComboBox.setForeground(foregroundColor);
+        languageComboBox.setBackground(backgroundColor);
+        rulesTxt.setForeground(foregroundColor);
+        twentyRule.setForeground(foregroundColor);
+        thirtyRule.setForeground(foregroundColor);
+        oneHourRule.setForeground(foregroundColor);
+        twoHoursRule.setForeground(foregroundColor);
+        infoWindow.setBackground(backgroundColor);
+        infoTitle.setForeground(foregroundColor);
+        infoText.setForeground(foregroundColor);
+        moreInfoTxt.setForeground(foregroundColor);
+        actionTxt.setForeground(foregroundColor);
+        actionComboBox.setForeground(foregroundColor);
+        actionComboBox.setBackground(backgroundColor);
+        saveButton.setForeground(foregroundColor);
+        saveButton.setBackground(backgroundColor);
+        cancelButton.setForeground(foregroundColor);
+        cancelButton.setBackground(backgroundColor);
+        frameTitle.setForeground(foregroundColor);
     }
 
 
@@ -332,8 +291,6 @@ public class Settings {
         infoWindow.setContentPane(infoPanel);
         infoWindow.setSize(180, 86);
 
-        /* inforImage = new ImageIcon("src/icons/info.png");
-        info20.setIcon(inforImage); */
         info20.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
                 infoTitle.setText("20 - 20 - 20 Rule :");
@@ -344,7 +301,6 @@ public class Settings {
             }
         });
 
-        // info30.setIcon(inforImage);
         info30.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
                 infoTitle.setText("30 min - 5 min Rule :");
@@ -355,7 +311,6 @@ public class Settings {
             }
         });
 
-        // info1.setIcon(inforImage);
         info1.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
                 infoTitle.setText("1 hour - 10 min Rule :");
@@ -366,7 +321,6 @@ public class Settings {
             }
         });
 
-        // info2.setIcon(inforImage);
         info2.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
                 infoTitle.setText("2 hours - 20 min Rule :");
@@ -377,7 +331,6 @@ public class Settings {
             }
         });
 
-        // otherPractices.setIcon(inforImage);
         otherPractices.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
                 infoTitle.setText("recommended Practices :");
@@ -405,17 +358,11 @@ public class Settings {
 
 
     private void saveData() {
-        // try {
         SettingsFile.saveSettings(oldThemeIndex != lastThemeIndex, lastThemeIndex + "" + languageComboBox.getSelectedIndex() + "" +
                 lastRuleIndex + "" + actionComboBox.getSelectedIndex());
-            /* } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            } */
         Start.changeTimes();
         StopScreen.changeTimes();
         show(false);
-        /* isThereChanged = false;
-        isThemeChanged = false; */
     }
 
 

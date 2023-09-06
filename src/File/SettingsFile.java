@@ -87,21 +87,15 @@ public class SettingsFile {
             writer.close();
             System.out.println("data :  " + data);
 
-            // System.out.println("data.charAt(0) - 48 != values[0] :   " + (data.charAt(0) - 48 != values[0]));
-            // if (data.charAt(0) - 48 != values[0]) {
             if (isThemeChanged) {
                 int yesOrNo = dialog.show(true, 190);
-                /* int yesOrNo = JOptionPane.showConfirmDialog(null, "Do you want to restart EyeRest to change the theme now?!!",
-                        "Restart", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE); */
                 if (yesOrNo == 1) {
                     final String javaBin = System.getProperty("java.home") + File.separator + "bin" + File.separator + "java";
                     final File currentJar = new File(Main.Main.class.getProtectionDomain().getCodeSource().getLocation().toURI());
 
-                    /* is it a jar file? */
                     if (!currentJar.getName().endsWith(".jar"))
                         return;
 
-                    /* Build command: java -jar application.jar */
                     final ArrayList<String> command = new ArrayList<>();
                     command.add(javaBin);
                     command.add("-jar");
