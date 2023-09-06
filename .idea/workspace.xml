@@ -6,25 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5c6de560-2c26-4925-94e6-fe6db5a2eacd" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/StopScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/Start/StopScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/pop_comp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyeRest01/icons/pop_comp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start/Settings.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Settings.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/File/SettingsFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/File/SettingsFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Dialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start/Start.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Start.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Start/StopScreen.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/StopScreen.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start/StopScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/StopScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/icons/pop_comp.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/icons/pop_comp.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
