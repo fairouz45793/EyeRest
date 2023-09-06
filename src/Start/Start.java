@@ -1,7 +1,10 @@
 
 package Start;
 
+import File.SettingsFile;
+
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.*;
@@ -18,30 +21,43 @@ public class Start {
     private JLabel time;
     private JLabel pop;
     private JTextField resumeTime;
+    private JPanel subPanel;
+    private JLabel timeTxt;
+    private JLabel resumeTxt;
+    private JLabel resumeMinTxt;
+    private JLabel timeMinTxt;
 
     private JLabel closeBtn;
     private JLabel restartBtn;
     private JLabel pauseBtn;
-    private JLabel settings;
+    private JLabel settingsBtn;
 
-    private static boolean instance = false;
+    private static JFrame frame;
     private static boolean isPaused = false;
     private static boolean isPop1 = true;
 
     private static final int x = Toolkit.getDefaultToolkit().getScreenSize().width - 15;
     private static int stopTime = 0;
     private static int min = 0, sec = 0;
+    private static int timeToTakeRest, restTime;
 
     private static final ImageIcon popIcon1 = new ImageIcon("src/icons/pop_demi.png");
     private static final ImageIcon popIcon2 = new ImageIcon("src/icons/pop_comp.png");
     private static final ImageIcon pauseIcon = new ImageIcon("src/icons/pause.png");
     private static final ImageIcon playIcon = new ImageIcon("src/icons/play.png");
 
+    private static final Color blackColor = new Color(51, 51, 51);
+    private static final Color whiteColor = new Color(230, 230, 230);
+    private static final LineBorder blackBorder = new LineBorder(Color.BLACK, 1, true);
+    private static final LineBorder whiteBorder = new LineBorder(Color.WHITE, 1, true);
+
 
     public Start() {
-        if (instance) return;
-        instance = true;
-        JFrame frame = new JFrame();
+        if (frame != null) return;
+        frame = new JFrame();
+
+        changeTimes();
+        resumeTime.setCaretColor(new Color(0, 0, 0, 0));
 
         JWindow menu = new JWindow();
         pop.setIcon(popIcon1);
@@ -59,23 +75,21 @@ public class Start {
                 try {
                     if (isPop1) {
                         pop.setIcon(popIcon2);
-                        int xIndx = x - 257;
+                        int xIndx = x - 276;
                         for (int i = x; i > xIndx; i -= 2) {
                             frame.setLocation(i, frame.getLocationOnScreen().y);
                             Thread.sleep(1);
                         }
-                        // frame.setLocation(x - 256, frame.getLocationOnScreen().y);
                     } else {
                         pop.setIcon(popIcon1);
-                        // frame.setLocation(x, frame.getLocationOnScreen().y);
-                        for (int i = x - 257; i < x + 1; i += 2) {
+                        for (int i = x - 276; i < x + 1; i += 2) {
                             frame.setLocation(i, frame.getLocationOnScreen().y);
                             Thread.sleep(1);
                         }
                     }
                     menu.setVisible(false);
                     isPop1 = !isPop1;
-                } catch (InterruptedException ex) {
+                } catch (InterruptedException ignored) {
 
                 }
             }
@@ -84,11 +98,11 @@ public class Start {
         closeBtn = new JLabel();
         restartBtn = new JLabel();
         pauseBtn = new JLabel();
-        settings = new JLabel();
+        settingsBtn = new JLabel();
         closeBtn.setOpaque(false);
         restartBtn.setOpaque(false);
         pauseBtn.setOpaque(false);
-        settings.setOpaque(false);
+        settingsBtn.setOpaque(false);
 
         JPanel contentPane = new JPanel();
         contentPane.setLayout(new BorderLayout(0, 2));
@@ -98,7 +112,7 @@ public class Start {
         tempPanel.setLayout(new BorderLayout(0, 2));
         tempPanel.setOpaque(false);
         tempPanel.add(restartBtn, BorderLayout.NORTH);
-        tempPanel.add(settings, BorderLayout.SOUTH);
+        tempPanel.add(settingsBtn, BorderLayout.SOUTH);
         contentPane.add(tempPanel, BorderLayout.SOUTH);
         menu.setContentPane(contentPane);
         menu.setBackground(new Color(0, 0, 0, 0));
@@ -138,11 +152,13 @@ public class Start {
             }
         });
 
-        settings.setIcon(new ImageIcon("src/icons/settings.png"));
-        settings.addMouseListener(new MouseAdapter() {
+        Settings settings = new Settings();
+        settingsBtn.setIcon(new ImageIcon("src/icons/settings.png"));
+        settingsBtn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-
+                settings.reload();
+                settings.show(true);
             }
         });
 
@@ -150,7 +166,7 @@ public class Start {
             if (event instanceof MouseEvent) {
                     if (event.getID() == MouseEvent.MOUSE_ENTERED) {
                         Object source = event.getSource();
-                        if (source == pauseBtn || source == restartBtn || source == closeBtn || source == settings) return;
+                        if (source == pauseBtn || source == restartBtn || source == closeBtn || source == settingsBtn) return;
                         if (source == pop) {
                             if (isPop1) menu.setLocation(pop.getLocationOnScreen().x - 7, pop.getLocationOnScreen().y + 30);
                             else menu.setLocation(pop.getLocationOnScreen().x, pop.getLocationOnScreen().y + 32);
@@ -158,11 +174,11 @@ public class Start {
                         } else menu.setVisible(false);
                     }
             }
-            if (event instanceof WindowEvent) {
+            /* if (event instanceof WindowEvent) {
                 if (event.getID() == WindowEvent.WINDOW_DEACTIVATED || event.getID() == WindowEvent.WINDOW_STATE_CHANGED) {
                     if (menu.isVisible()) menu.setVisible(false);
                 }
-            }
+            } */
         }, AWTEvent.WINDOW_EVENT_MASK | AWTEvent.MOUSE_EVENT_MASK);
 
 
@@ -172,7 +188,7 @@ public class Start {
             final StringBuilder tempTime = new StringBuilder();
 
             @Override public void run() {
-                if (stopTime != 0) {
+                if (stopTime > -1) {
                     stopTime--;
                     return;
                 } else {
@@ -183,13 +199,15 @@ public class Start {
                     if (stopScreen.isVisible()) {
                         stopScreen.show(false);
                         min = 0;
-                        sec = 0;
+                        sec = -1;
                     }
                 }
+
                 if (isPaused) return;
-                if (min == 20) {
+                if (min == timeToTakeRest) {
                     stopScreen.show(true);
-                    stopTime = 20;
+                    stopTime = restTime;
+                    return;
                 }
 
                 if (sec == 59) { sec = 0; min++; }
@@ -208,6 +226,9 @@ public class Start {
         timer.scheduleAtFixedRate(task, calendar.getTime(), 1000);
 
         resumeAfter.addActionListener(e -> {
+            if (resumeTime.getText().isEmpty())
+                return;
+
             if (resumeAfter.isSelected()) {
                 pauseBtn.setIcon(playIcon);
                 stopTime = Integer.parseInt(resumeTime.getText()) * 60;
@@ -217,17 +238,61 @@ public class Start {
         });
 
         ((PlainDocument) resumeTime.getDocument()).setDocumentFilter(new NumbersOnly());
+        setTheme();
 
         frame.setUndecorated(true);
         frame.setContentPane(mainPanel);
         frame.setLocation(x, 130);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 150);
+        frame.setSize(320, 150);
         frame.setBackground(new Color(0, 0, 0, 0));
         frame.setResizable(false);
         frame.setAlwaysOnTop(true);
         frame.setType(javax.swing.JFrame.Type.UTILITY);
         frame.setVisible(true);
+    }
+
+
+    public static void changeTimes() {
+        // try {
+            restTime = 20;
+            timeToTakeRest = 20;
+            switch (SettingsFile.getRule()) {
+                case 0 -> { restTime = 20;   timeToTakeRest = 20; }
+                case 1 -> { restTime = 300;  timeToTakeRest = 30; }
+                case 2 -> { restTime = 600;  timeToTakeRest = 60; }
+                case 3 -> { restTime = 1200; timeToTakeRest = 120; }
+            }
+        /* } catch (IOException ex) {
+            ex.printStackTrace();
+        } */
+    }
+
+
+    public void setTheme() {
+        if (SettingsFile.getTheme() == 0) {
+            subPanel.setBackground(blackColor);
+            timeTxt.setForeground(whiteColor);
+            timeMinTxt.setForeground(whiteColor);
+            time.setForeground(whiteColor);
+            resumeTxt.setForeground(whiteColor);
+            resumeMinTxt.setForeground(whiteColor);
+            resumeTime.setForeground(whiteColor);
+            resumeTime.setBackground(blackColor);
+            resumeTime.setBorder(whiteBorder);
+            resumeAfter.setBackground(blackColor);
+        } else {
+            subPanel.setBackground(whiteColor);
+            timeTxt.setForeground(blackColor);
+            timeMinTxt.setForeground(blackColor);
+            time.setForeground(blackColor);
+            resumeTxt.setForeground(blackColor);
+            resumeMinTxt.setForeground(blackColor);
+            resumeTime.setForeground(blackColor);
+            resumeTime.setBackground(whiteColor);
+            resumeTime.setBorder(blackBorder);
+            resumeAfter.setBackground(whiteColor);
+        }
     }
 
 }
