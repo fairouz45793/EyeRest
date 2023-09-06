@@ -270,7 +270,9 @@ public class Settings {
         infoWindow = new JWindow();
         JPanel infoPanel = new JPanel();
         Dimension titleDimension = new Dimension(160, 20);
-        Dimension textDimension = new Dimension(160, 50);
+        Dimension textDimension1 = new Dimension(160, 50);
+        Dimension textDimension2 = new Dimension(240, 140);
+        final boolean[] isDim1 = {true};
 
         infoTitle = new JLabel();
         infoTitle.setFont(new Font(Font.SERIF, Font.BOLD, 12));
@@ -284,15 +286,18 @@ public class Settings {
         infoText.setWrapStyleWord(true);
         infoText.setLineWrap(true);
         infoPanel.add(infoText, BorderLayout.SOUTH);
-        infoText.setMinimumSize(textDimension);
-        infoText.setPreferredSize(textDimension);
 
         infoPanel.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
         infoWindow.setContentPane(infoPanel);
-        infoWindow.setSize(180, 86);
 
         info20.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
+                if (!isDim1[0]) {
+                    infoText.setMinimumSize(textDimension1);
+                    infoText.setPreferredSize(textDimension1);
+                    infoWindow.setSize(180, 86);
+                    isDim1[0] = true;
+                }
                 infoTitle.setText("20 - 20 - 20 Rule :");
                 infoText.setText("  Gaze at a distant object (at least 20 feet away = 6 meter) for at least 20 seconds.");
                 Point p = info20.getLocationOnScreen();
@@ -303,6 +308,12 @@ public class Settings {
 
         info30.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
+                if (!isDim1[0]) {
+                    infoText.setMinimumSize(textDimension1);
+                    infoText.setPreferredSize(textDimension1);
+                    infoWindow.setSize(180, 86);
+                    isDim1[0] = true;
+                }
                 infoTitle.setText("30 min - 5 min Rule :");
                 infoText.setText("  Gaze at a distant object (look from window for example) for at least 5 minutes.");
                 Point p = info30.getLocationOnScreen();
@@ -313,6 +324,12 @@ public class Settings {
 
         info1.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
+                if (!isDim1[0]) {
+                    infoText.setMinimumSize(textDimension1);
+                    infoText.setPreferredSize(textDimension1);
+                    infoWindow.setSize(180, 86);
+                    isDim1[0] = true;
+                }
                 infoTitle.setText("1 hour - 10 min Rule :");
                 infoText.setText("  Gaze at a distant object (look from window for example) for at least 10 minutes.");
                 Point p = info1.getLocationOnScreen();
@@ -323,6 +340,12 @@ public class Settings {
 
         info2.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
+                if (!isDim1[0]) {
+                    infoText.setMinimumSize(textDimension1);
+                    infoText.setPreferredSize(textDimension1);
+                    infoWindow.setSize(180, 86);
+                    isDim1[0] = true;
+                }
                 infoTitle.setText("2 hours - 20 min Rule :");
                 infoText.setText("  Gaze at a distant object (look from window for example) for at least 20 minutes.");
                 Point p = info2.getLocationOnScreen();
@@ -333,10 +356,17 @@ public class Settings {
 
         otherPractices.addMouseListener(new MouseAdapter() {
             @Override public void mouseClicked(MouseEvent e) {
-                infoTitle.setText("recommended Practices :");
-                infoText.setText("  Gaze at a distant object (at least 20 feet away = 6 meter) for at least 20 seconds." +
-                        "\n  look far away at an object for 10-15 seconds, then gaze at something up close for 10-15 seconds." +
-                        "\n  Then look back at the distant object. Do this 10 times.");
+                if (isDim1[0]) {
+                    infoText.setMinimumSize(textDimension2);
+                    infoText.setPreferredSize(textDimension2);
+                    infoWindow.setSize(260, 176);
+                    isDim1[0] = false;
+                }
+                infoTitle.setText("Recommended Practices :");
+                infoText.setText("  Make your food healthy, do some physical exercises to keep you healthy, go out and " +
+                        "walk without watching on your smartphone and stare far away for 30 min per day, and do not " +
+                        "forget to wear sunglasses. \n\n  Do not take these information are 100% correct, please contact " +
+                        "your Ophthalmologist to get more information and advice according to your case.");
                 Point p = otherPractices.getLocationOnScreen();
                 infoWindow.setLocation(p.x + 20, p.y);
                 infoWindow.setVisible(true);
