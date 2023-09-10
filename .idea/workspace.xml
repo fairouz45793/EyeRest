@@ -1,11 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EyesRest:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c6de560-2c26-4925-94e6-fe6db5a2eacd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EyeRest01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EyesRest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/File/SettingsFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/File/SettingsFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/File/settings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/File/settings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Dialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/NumbersOnly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/NumbersOnly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/STimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/STimer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/StopScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/Start/StopScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/AbstractLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/DimensionInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/GridConstraints.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/GridLayoutManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/HorizontalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/Spacer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/SupportCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/com/intellij/uiDesigner/core/VerticalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/black arrow 0.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/black arrow 0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/black arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/black arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/black close.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/black close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/black info.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/black info.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/pause.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/play.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/pop_comp.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/pop_comp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/pop_demi.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/pop_demi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/restart.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/restart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/settings.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/settings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/white arrow 0.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/white arrow 0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/white arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/white arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/white close.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/white close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyeRest01/icons/white info.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/icons/white info.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Start/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +91,11 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;16&quot;,
     &quot;last_opened_file_path&quot;: &quot;F:/Nouveau dossier (2)/android + intellij + visual s = source code/IdeaProjects/git and github/EyeRest/src/icons&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
@@ -50,7 +111,20 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="EyeRest01" />
+      <module name="EyesRest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="EyesRest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="EyesRest" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

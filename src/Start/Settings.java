@@ -102,17 +102,9 @@ public class Settings {
             twoHoursRule.setSelected(true);
         });
 
-        actionComboBox.addActionListener(e -> {
-            lastActionIndex = actionComboBox.getSelectedIndex();
-        });
-
-        saveButton.addActionListener(e -> {
-            if (isThereChanges()) saveData();
-        });
-
-        cancelButton.addActionListener(e -> {
-            show(false);
-        });
+        actionComboBox.addActionListener(e -> lastActionIndex = actionComboBox.getSelectedIndex() );
+        saveButton.    addActionListener(e -> { if (isThereChanges()) saveData(); });
+        cancelButton.  addActionListener(e -> show(false) );
 
         closeButton.setBackground(Color.RED);
         closeButton.setOpaque(false);
@@ -133,10 +125,7 @@ public class Settings {
             }
 
             @Override public void mouseEntered(MouseEvent e) { closeButton.setOpaque(true); closeButton.repaint(); }
-
-            @Override public void mouseExited(MouseEvent e) {
-                closeButton.setOpaque(false); closeButton.repaint();
-            }
+            @Override public void mouseExited(MouseEvent e)  { closeButton.setOpaque(false); closeButton.repaint(); }
         });
 
         info20.setBackground(new Color(0, 0, 0, 0));
