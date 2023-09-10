@@ -1,4 +1,7 @@
-
+/*
+ *  Copyright (C) 2016  EyesRest maintainer
+ *  SPDX-License-Identifier: GPL-3.0
+ */
 package File;
 
 import Start.Dialog;
