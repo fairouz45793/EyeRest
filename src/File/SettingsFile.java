@@ -1,6 +1,5 @@
 /*
- *  Copyright (C) 2016  EyesRest maintainer
- *  SPDX-License-Identifier: GPL-3.0
+ *  SPDX-License-Identifier: LGPL-2.1-or-later
  */
 package File;
 
