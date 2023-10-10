@@ -1,0 +1,102 @@
+/*
+ *  SPDX-License-Identifier: LGPL-2.1-or-later
+ */
+package File;
+
+import Start.Dialog;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+
+public class SettingsFile {
+
+    private static File file;
+    private static int[] values;
+    static Dialog dialog = new Dialog("Restart", "To change theme now you need to restart EyeRest\n" +
+            "Do you want to restart now?!!", "Yes", "No");
+
+    private static boolean isFileExist() {
+        try {
+            file = new File(System.getProperty("user.dir") + File.separator + "settings.txt");
+            if (file.exists()) {
+                return true;
+            }
+
+            if (!file.createNewFile()) return false;
+            saveSettings(false, "0000");
+
+            return true;
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+
+    private static void getFileStrings() {
+        try {
+            if (!isFileExist()) return;
+            FileReader reader = new FileReader(file);
+            if (values == null) values = new int[4];
+            int val = reader.read() - 48;
+            int i = 0;
+            while (val >= 0) {
+                values[i++] = val;
+                val = reader.read() - 48;
+            }
+            reader.close();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
+    public static int getTheme() {
+        if (values == null) getFileStrings();
+        return values[0];
+    }
+
+    public static int getLanguage() {
+        if (values == null) getFileStrings();
+        return values[1];
+    }
+
+    public static int getRule() {
+        if (values == null) getFileStrings();
+        return values[2];
+    }
+
+    public static int getAction() {
+        if (values == null) getFileStrings();
+        return values[3];
+    }
+
+
+    public static void saveSettings(boolean isThemeChanged, String data) {
+        for (int i = 0; i < 4; i++) {
+            values[i] = data.charAt(i) - 48;
+        }
+
+        try {
+            FileWriter writer = new FileWriter(file);
+            writer.append(data, 0, 4);
+            writer.close();
+
+            if (isThemeChanged) {
+                int yesOrNo = dialog.show(true, 190);
+                if (yesOrNo == 1) {
+                    StringBuilder path = new StringBuilder(System.getProperty("user.dir"));
+                    Runtime.getRuntime().exec(path + File.separator + "restart.exe", null, new File(path.toString()));
+                    System.exit(0);
+                }
+            }
+        } catch (IOException  ex) {
+            ex.printStackTrace();
+        }
+    }
+
+}

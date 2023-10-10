@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="EyesRest:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c6de560-2c26-4925-94e6-fe6db5a2eacd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EyesRest_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/EyesRest_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EyesRest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EyesRest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/EyesRest_jar/EyesRest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/EyesRest_jar/EyesRest.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/File/SettingsFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/File/SettingsFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/File/settings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Dialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/NumbersOnly.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/NumbersOnly.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/STimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Settings.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/Start.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/EyesRest/Start/StopScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/File/SettingsFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/File/SettingsFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/File/settings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Dialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/NumbersOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/NumbersOnly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/STimer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/Start.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start/StopScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start/StopScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/black arrow 0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/black arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/black close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/black info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/pop_comp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/pop_demi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/white arrow 0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/white arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/white close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/icons/white info.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2Tf8a9l7mj2NGoBQhO0mSQKtRtB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;16&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Nouveau dossier (2)/android + intellij + visual s = source code/IdeaProjects/git and github/Restart&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Nouveau dossier (2)\android + intellij + visual s = source code\IdeaProjects\git and github\EyesRest\src\File" />
+      <recent name="F:\Nouveau dossier (2)\android + intellij + visual s = source code\IdeaProjects\git and github\EyeRest\src\icons" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Nouveau dossier (2)\android + intellij + visual s = source code\IdeaProjects\git and github\EyesRest\resources" />
+      <recent name="F:\Nouveau dossier (2)\android + intellij + visual s = source code\IdeaProjects\git and github\EyeRest\src\File" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="EyesRest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c6de560-2c26-4925-94e6-fe6db5a2eacd" name="Changes" comment="" />
+      <created>1691422836579</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691422836579</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="tasksCmd" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
